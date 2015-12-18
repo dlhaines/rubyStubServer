@@ -6,10 +6,14 @@
 
 # TTD:
 # does not use query parameters.
+# startup script that takes port
+# startup script that takes optional base directory
 
 require 'sinatra'
 require 'slim'
 require 'json'
+
+# Currently look for a 'data' directory below the current working directory.
 
 set :base_dir, "./data"
 
@@ -37,7 +41,8 @@ helpers do
     nil
   end
 
-  # actually return a disk file unless there isn't one.
+  # Return contents of the named disk file.  Only
+  # files known to exist should be referenced.
   def getDiskFile(full_disk_file)
     unless full_disk_file.nil?
       return File.read(full_disk_file)

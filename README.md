@@ -1,7 +1,14 @@
 # rubyStubServer
-Ruby web server to stub requests to matching disk files
 
-Implement trivial file-based ESB stub provider for StudentDashboard API.   If a data file exists that matches the
-the name and/or term in a request the contents of that files it will be returned as json.  If no such file
-is found a default file will be returned.   See the Ruby code for details.
+Ruby web server to stub http requests to matching disk files
 
+This implements a simple file-based stub provider. Requests are mapped to nested directories and files.  Directories map to
+url elements.  File names are derived from the trailing file name on the url.  If no matching file exists in the matching directory
+then the default.<extension> file in the directory is used if it exists.  If neither exists then a 404 is returned.  
+File names can also contain values for query parameters. Query parameters are sorted and values are matched to 
+corresponding elements of the file name.  If there is
+not a matching file then the default file for that directory will be used.
+
+Only json files are currently supported.
+
+Multiple stub servers can be run on different ports in order to stub out multiple dependencies.
