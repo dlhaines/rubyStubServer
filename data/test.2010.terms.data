@@ -1,0 +1,9 @@
+{
+  "getMyRegTermsResponse": {
+    "Term": {
+      "TermCode": "1960",
+      "TermDescr": "Fallish like 2014",
+      "TermShortDescr": "FA 2014"
+    }
+  }
+}
