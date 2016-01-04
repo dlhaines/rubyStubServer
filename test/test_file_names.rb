@@ -10,8 +10,6 @@ require_relative '../stub_helpers'
 
 class TestFileNameGeneration < Minitest::Test
 
-  include StubHelpers
-
   # Called before every test method runs. Can be used
   # to set up fixture information.
   def setup
