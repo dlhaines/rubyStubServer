@@ -1,61 +1,37 @@
-#require 'rubygems'
-require 'minitest'
-require 'minitest/autorun'
-require 'minitest/unit'
-require 'minitest/reporters'
-require 'shoulda'
-#require 'shoulda/context'
-# require 'webmock/minitest'
 
-reporter_options = { color: false }
-
-# default output
-#MiniTest::Reporters.use!
-# default without color
-#reporter_options = { color: true }
-#MiniTest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
-
-# spec type output
-MiniTest::Reporters.use! [Minitest::Reporters::SpecReporter.new(reporter_options)]
+require_relative 'test_helper'
+require_relative '../stub_helpers'
 
 class FileAccessTest < Minitest::Test
 
+  context "DISK FILE ACCESS" do
 
-  # Called before every test method runs. Can be used
-  # to set up fixture information.
-  # def setup
-  #   # Do nothing
-  # end
-  #
-  # # Called after every test method runs. Can be used to tear
-  # # down fixture information.
-  #
-  # def teardown
-  #   # Do nothing
-  # end
-
-  context "EXISTING FILES" do
-    # could have block for 'setup' and 'teardown'
-    should "test fail" do
-      #skip "known to fail"
-      assert_equal('a','b')
+    ###############
+    setup do
+      @m = Class.new do
+        include StubHelpers
+      end.new
     end
 
-    should "test pass" do
-      assert_equal('a','a')
+    teardown do
     end
-  end
+    ###############
 
-  context "MISSING FILES" do
-    # could have block for 'setup' and 'teardown'
-    should "test fail" do
-      #skip "known to fail"
-      assert_equal('a','b')
+    should "test_gen_disk_existing_file" do
+      s = @m.getDiskFileName("./test-files/data", "/not_empty", "exists.json")
+      assert_equal "./test-files/data/not_empty/exists.json", s, "existing file"
     end
 
-    should "test pass" do
-      assert_equal('a','a')
+    should "test_gen_disk_no_default_file" do
+      s = @m.getDiskFileName("./test-files/data", "/not_empty", "missing.json")
+      assert_nil s, "no default file"
     end
+
+    should "test_gen_disk_default_file" do
+      s = @m.getDiskFileName("./test-files/data", "/subdir", "missing.json")
+      assert_equal "./test-files/data/subdir/default.json", s, "no default file"
+    end
+
   end
 
 end

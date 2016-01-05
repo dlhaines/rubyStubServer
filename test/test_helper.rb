@@ -13,8 +13,31 @@ SimpleCov.start do
   end
 end
 
-include Logging
+#include Logging
+require_relative '../Logging'
 
+#### setup test environment
+require 'minitest'
+require 'minitest/autorun'
+require 'minitest/unit'
+require 'minitest/reporters'
+require 'shoulda'
+#require 'shoulda/context'
+# require 'webmock/minitest'
+
+reporter_options = { color: false }
+
+# default output
+#MiniTest::Reporters.use!
+# default without color
+#reporter_options = { color: true }
+#MiniTest::Reporters.use! [Minitest::Reporters::DefaultReporter.new(reporter_options)]
+
+# spec type output
+MiniTest::Reporters.use! [Minitest::Reporters::SpecReporter.new(reporter_options)]
+
+
+### setup utility methods
 class TestHelper < Object
 
   # store a global default log level that test files can
