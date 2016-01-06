@@ -54,14 +54,17 @@ class TestHelper < Object
   def self.findTestFileDirectory
     currentDirectory = Dir.pwd()
 
-    checkDir = "#{currentDirectory}/server/test-files"
+    checkDir = "#{currentDirectory}/test-files"
+    #puts "checkDir: A: #{checkDir}"
     return checkDir if Dir.exist?(checkDir);
 
-    checkDir = File.dirname(currentDirectory)+"/test-files"
+    #checkDir = File.dirname(currentDirectory)+"/test/test-files"
+    checkDir = "#{currentDirectory}/test/test-files"
+    #puts "checkDir: B: #{checkDir}"
     return checkDir if Dir.exist?(checkDir);
 
     # didn't find anything.
-    puts "CAN NOT FIND TEST FILE DIRECTORY: ";
+    puts "CAN NOT FIND TEST FILE DIRECTORY: current dir: #{currentDirectory}"
     exit 1
   end
 

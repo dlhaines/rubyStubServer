@@ -1,6 +1,4 @@
-
 require_relative 'test_helper'
-
 require_relative '../stub_helpers'
 
 class StatsTest < Minitest::Test
@@ -13,17 +11,21 @@ class StatsTest < Minitest::Test
     teardown do
     end
     ###############
-
     should "display count,  min/max delay, elapsed, avg time" do
-      assert_equal 'a','a',"dull as toast"
+      skip "not implemented"
     end
   end
 
   context "CONFIGURATION" do
     should "display configuration settings" do
-      assert_equal 'a','a',"dull as toast"
+      skip "not implemented"
     end
   end
 
+  context "STATUS" do
+    should "display normal T&L Status" do
+      skip "not implemented"
+    end
+  end
 
 end

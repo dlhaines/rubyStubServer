@@ -19,37 +19,37 @@ set :base_dir, "./data"
 
 helpers do
 
-  # find the name of the corresponding file on disk using base_dir and defaulting file name.
-  # return nil if no matching file is found.  It assumes no query parameters.
-  def getDiskFileName(file_path, file_name)
+  # # find the name of the corresponding file on disk using base_dir and defaulting file name.
+  # # return nil if no matching file is found.  It assumes no query parameters.
+  # def getDiskFileName(file_path, file_name)
+  #
+  #   puts "dfn: file_path: [#{file_path}] file_name: [#{file_name}]"
+  #   full_file_path = settings.base_dir
+  #
+  #   if !file_path.nil? && file_path.length > 0
+  #     full_file_path = "#{full_file_path}#{file_path}"
+  #   end
+  #
+  #   if File.exists? ("#{full_file_path}/#{file_name}")
+  #     return "#{full_file_path}/#{file_name}"
+  #   end
+  #
+  #   if File.exists? ("#{full_file_path}/default.json")
+  #     return "#{full_file_path}/default.json"
+  #   end
+  #
+  #   nil
+  # end
 
-    puts "dfn: file_path: [#{file_path}] file_name: [#{file_name}]"
-    full_file_path = settings.base_dir
-
-    if !file_path.nil? && file_path.length > 0
-      full_file_path = "#{full_file_path}#{file_path}"
-    end
-
-    if File.exists? ("#{full_file_path}/#{file_name}")
-      return "#{full_file_path}/#{file_name}"
-    end
-
-    if File.exists? ("#{full_file_path}/default.json")
-      return "#{full_file_path}/default.json"
-    end
-
-    nil
-  end
-
-  # Return contents of the named disk file.  Only
-  # files known to exist should be referenced.
-  def getDiskFile(full_disk_file)
-    unless full_disk_file.nil?
-      return File.read(full_disk_file)
-    end
-
-    halt 404
-  end
+  # # Return contents of the named disk file.  Only
+  # # files known to exist should be referenced.
+  # def getDiskFile(full_disk_file)
+  #   unless full_disk_file.nil?
+  #     return File.read(full_disk_file)
+  #   end
+  #
+  #   halt 404
+  # end
 
 end
 
@@ -71,6 +71,7 @@ get '*' do
 
   file_request = getDiskFileName(file_path, file_name)
 
+  # may get back a nil, then do a halt 404
   getDiskFile(file_request)
 end
 

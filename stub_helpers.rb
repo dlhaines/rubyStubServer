@@ -3,13 +3,13 @@ module StubHelpers
 
   def getDiskFileName(base_dir,file_path, file_name)
 
-    puts "dfn: base_dir: [#{base_dir}] file_path: [#{file_path}] file_name: [#{file_name}]"
+    #puts "dfn: base_dir: [#{base_dir}] file_path: [#{file_path}] file_name: [#{file_name}]"
     #full_file_path = settings.base_dir
     full_file_path = base_dir
 
     # assemble the right path
     if !file_path.nil? && file_path.length > 0
-      puts "A: #{full_file_path}#{file_path}"
+      #puts "A: #{full_file_path}#{file_path}"
       full_file_path = "#{full_file_path}#{file_path}"
     end
 
@@ -43,6 +43,12 @@ module StubHelpers
     }
     s.slice!(0) # remove trivial value
     ['default.']+s
+  end
+
+  # Return contents of the named disk file (or nil if the file name is nil).
+  # Only files known to exist should be referenced.
+  def getDiskFile(full_disk_file)
+    full_disk_file.nil? ? nil : File.read(full_disk_file)
   end
 
 end
