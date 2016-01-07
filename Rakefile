@@ -10,7 +10,7 @@ task :test => ["test:all"]
 # define the test tasks
 namespace :test do
   desc "available tests are: [:test:all, :test:files]"
-  task :all => [:files, :TTD]
+  task :all => [:files, :server, :TTD]
   
   ## specific tests
   # test file name and file handling.
@@ -22,8 +22,17 @@ namespace :test do
     t.verbose = true
   end
 
+  ## test with rack mock server.
+  Rake::TestTask.new do |t|
+    t.libs << "test"
+    t.name = "server"
+    t.description = "Test server via rack"
+    t.test_files = FileList['**/test_app*.rb']
+    t.verbose = true
+  end
+  
   ## things left to do
-    Rake::TestTask.new do |t|
+  Rake::TestTask.new do |t|
     t.libs << "test"
     t.name = "TTD"
     t.description = "Tests for things to do (TTD)"

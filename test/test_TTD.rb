@@ -28,4 +28,10 @@ class TTDTest < Minitest::Test
     end
   end
 
+  context "STARTUP" do
+    should_eventually "have command line startup" do
+      skip "not implemented"
+    end
+  end
+
 end
