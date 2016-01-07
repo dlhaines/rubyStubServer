@@ -3,6 +3,14 @@ require 'rake/testtask'
 # default is to test
 task :default => ["test"]
 
+
+#
+desc "Starts the thin web server through rackup."
+task :serve do
+  #%x[rackup -p 9292 -s thin]
+  %x[rackup -p 9292]
+end
+
 # define tests
 
 # define tests run if just invoke "test" task.

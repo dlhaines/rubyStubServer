@@ -8,16 +8,21 @@
 # does not use query parameters.
 # startup script that takes port
 # startup script that takes optional base directory
-# add logging
 
 require 'sinatra'
 require 'slim'
 require 'json'
+require_relative 'Logging'
 require_relative 'stub_helpers'
 
 class App < Sinatra::Base
 
   include StubHelpers
+
+  configure do
+    #set :logging, Logger::ERROR
+    set :logging, Logger::DEBUG
+  end
 
   # Add explicit initialize method so can pass in startup parameters.  Those
   # parameters are referenced as instance variables.
@@ -31,6 +36,9 @@ class App < Sinatra::Base
 
   get '*' do
     content_type :json
+
+    logger.error("HOWDY - error")
+    logger.debug("DUTY - debug")
 
     path_info = request.env["PATH_INFO"]
     rx = Regexp.new("^(.*)/([^/]*)$")
