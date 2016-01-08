@@ -1,7 +1,9 @@
 # config.ru (run with rackup)
+
 require './stubToDisk'
 require 'logger'
-DATA_DIR='/Users/dlhaines/dev/GITHUB/dlh-umich.edu/rubyStubServer/test/test-files/data'
+
+data_dir = ENV['DATA_DIR']
 
 ### uncomment this if want log to a file.
 #
@@ -21,6 +23,7 @@ DATA_DIR='/Users/dlhaines/dev/GITHUB/dlh-umich.edu/rubyStubServer/test/test-file
 # #use Rack::Logger, $your_log_level
 # use Rack::Logger, Logger::ERROR
 # use Rack::CommonLogger
-  
-run App.new(DATA_DIR)
+
+# The value of ENV['PORT'] is used by rackup.  The data directory value is passed here to the server.
+run App.new(data_dir)
 

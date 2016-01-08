@@ -4,17 +4,20 @@ require 'rake/testtask'
 task :default => ["test"]
 
 
-#
-desc "Starts the thin web server through rackup."
-task :serve do
-  #%x[rackup -p 9292 -s thin]
-  %x[rackup -p 9292]
+desc "Starts the default web server through rackup, set port and data directory via environment variables PORT and DATA_DIR.  E.g. task server PORT=6666 DATA_DIR=/etc/password"
+task :server do
+
+  ENV['PORT'] = '9292' if ENV['PORT'].nil?
+  ENV['DATA_DIR'] = "#{Dir.pwd}/test/test-files/data" if ENV['DATA_DIR'].nil?
+  puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}]"
+  %x[rackup -p #{ENV['PORT']}]
 end
 
-# define tests
+######## Configure tests
 
-# define tests run if just invoke "test" task.
+# Run all tests if just specify the 'test' task.
 task :test => ["test:all"]
+
 # define the test tasks
 namespace :test do
   desc "available tests are: [:test:all, :test:files]"
@@ -25,7 +28,7 @@ namespace :test do
   Rake::TestTask.new do |t|
     t.libs << "test"
     t.name = "files"
-    t.description = "Check file implementation of stub"
+    t.description = "Verify file implementation of stub"
     t.test_files = FileList['**/test_file_*.rb']
     t.verbose = true
   end
@@ -34,7 +37,7 @@ namespace :test do
   Rake::TestTask.new do |t|
     t.libs << "test"
     t.name = "server"
-    t.description = "Test server via rack"
+    t.description = "Verify server via rack"
     t.test_files = FileList['**/test_app*.rb']
     t.verbose = true
   end
@@ -43,7 +46,7 @@ namespace :test do
   Rake::TestTask.new do |t|
     t.libs << "test"
     t.name = "TTD"
-    t.description = "Tests for things to do (TTD)"
+    t.description = "Document for things to do (TTD)"
     t.test_files = FileList['**/test_TTD*.rb']
     t.verbose = true
   end

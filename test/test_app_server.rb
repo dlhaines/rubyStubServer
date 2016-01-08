@@ -8,9 +8,6 @@ class AppServerTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
-    # setup default location for test files
-
-    puts "data dir: #{TestHelper.findTestFileDirectory+"/data"}"
     # Must return the application
     App.new(TestHelper.findTestFileDirectory+"/data")
   end
