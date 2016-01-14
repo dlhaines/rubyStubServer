@@ -1,0 +1,144 @@
+{
+    "entityPrefix": "mneme",
+    "mneme_collection": [
+      {
+        "allowUntillDate": 1481746460000,
+        "allowUntillDateString": "12-14-2016 20:14:20",
+        "closeDate": 1513282460000,
+        "closeDateString": "12-14-2017 20:14:20",
+        "context": {
+          "contextId": "86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "contextTitle": "mne-part 100 001 F15",
+          "contextUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "directToolUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053/page/08586727-ffbf-43b5-8de4-9d897dc9d1cb"
+        },
+        "gradebookItemExternalId": null,
+        "gradebookItemId": null,
+        "id": "1816",
+        "openDate": 1415827800000,
+        "openDateString": "11-12-2014 16:30:00",
+        "published": true,
+        "title": "MN Due today!",
+        "entityReference": "/mneme/1816",
+        "entityURL": "https://ctqasearch.dsc.umich.edu/direct/mneme/1816",
+        "entityId": "1816",
+        "entityTitle": "MN Due today!"
+      },
+      {
+        "allowUntillDate": 1451827740000,
+        "allowUntillDateString": "01-03-2016 08:29:00",
+        "closeDate": 1451827740000,
+        "closeDateString": "01-03-2016 08:29:00",
+        "context": {
+          "contextId": "86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "contextTitle": "mne-part 100 001 F15",
+          "contextUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "directToolUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053/page/08586727-ffbf-43b5-8de4-9d897dc9d1cb"
+        },
+        "gradebookItemExternalId": null,
+        "gradebookItemId": null,
+        "id": "1817",
+        "openDate": 1448055000000,
+        "openDateString": "11-20-2015 16:30:00",
+        "published": true,
+        "title": "MN Due yesterday",
+        "entityReference": "/mneme/1817",
+        "entityURL": "https://ctqasearch.dsc.umich.edu/direct/mneme/1817",
+        "entityId": "1817",
+        "entityTitle": "MN Due yesterday"
+      },
+      {
+        "allowUntillDate": 1451993340000,
+        "allowUntillDateString": "01-05-2016 06:29:00",
+        "closeDate": 1451993340000,
+        "closeDateString": "01-05-2016 06:29:00",
+        "context": {
+          "contextId": "86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "contextTitle": "mne-part 100 001 F15",
+          "contextUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "directToolUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053/page/08586727-ffbf-43b5-8de4-9d897dc9d1cb"
+        },
+        "gradebookItemExternalId": null,
+        "gradebookItemId": null,
+        "id": "1818",
+        "openDate": 1447968600000,
+        "openDateString": "11-19-2015 16:30:00",
+        "published": true,
+        "title": "MN Due tomorrow",
+        "entityReference": "/mneme/1818",
+        "entityURL": "https://ctqasearch.dsc.umich.edu/direct/mneme/1818",
+        "entityId": "1818",
+        "entityTitle": "MN Due tomorrow"
+      },
+      {
+        "allowUntillDate": null,
+        "allowUntillDateString": null,
+        "closeDate": null,
+        "closeDateString": null,
+        "context": {
+          "contextId": "86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "contextTitle": "mne-part 100 001 F15",
+          "contextUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "directToolUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053/page/08586727-ffbf-43b5-8de4-9d897dc9d1cb"
+        },
+        "gradebookItemExternalId": null,
+        "gradebookItemId": null,
+        "id": "1819",
+        "openDate": 1448055000000,
+        "openDateString": "11-20-2015 16:30:00",
+        "published": true,
+        "title": "MN No due date",
+        "entityReference": "/mneme/1819",
+        "entityURL": "https://ctqasearch.dsc.umich.edu/direct/mneme/1819",
+        "entityId": "1819",
+        "entityTitle": "MN No due date"
+      },
+      {
+        "allowUntillDate": 1451222940000,
+        "allowUntillDateString": "12-27-2015 08:29:00",
+        "closeDate": 1451222940000,
+        "closeDateString": "12-27-2015 08:29:00",
+        "context": {
+          "contextId": "86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "contextTitle": "mne-part 100 001 F15",
+          "contextUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "directToolUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053/page/08586727-ffbf-43b5-8de4-9d897dc9d1cb"
+        },
+        "gradebookItemExternalId": null,
+        "gradebookItemId": null,
+        "id": "1820",
+        "openDate": 1446672600000,
+        "openDateString": "11-04-2015 16:30:00",
+        "published": true,
+        "title": "MN Due 8 days ago",
+        "entityReference": "/mneme/1820",
+        "entityURL": "https://ctqasearch.dsc.umich.edu/direct/mneme/1820",
+        "entityId": "1820",
+        "entityTitle": "MN Due 8 days ago"
+      },
+      {
+        "allowUntillDate": 1452605340000,
+        "allowUntillDateString": "01-12-2016 08:29:00",
+        "closeDate": 1452605340000,
+        "closeDateString": "01-12-2016 08:29:00",
+        "context": {
+          "contextId": "86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "contextTitle": "mne-part 100 001 F15",
+          "contextUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053",
+          "directToolUrl": "https://ctqasearch.dsc.umich.edu/portal/site/86c4ff56-f9b0-4a87-99b1-c2eaf76ca053/page/08586727-ffbf-43b5-8de4-9d897dc9d1cb"
+        },
+        "gradebookItemExternalId": null,
+        "gradebookItemId": null,
+        "id": "1821",
+        "openDate": 1448055000000,
+        "openDateString": "11-20-2015 16:30:00",
+        "published": true,
+        "title": "MN Due 8 days from now",
+        "entityReference": "/mneme/1821",
+        "entityURL": "https://ctqasearch.dsc.umich.edu/direct/mneme/1821",
+        "entityId": "1821",
+        "entityTitle": "MN Due 8 days from now"
+      }
+    ]
+  }
+

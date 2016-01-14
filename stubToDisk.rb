@@ -37,8 +37,7 @@ class App < Sinatra::Base
   get '*' do
     content_type :json
 
-    logger.error("HOWDY - error")
-    logger.debug("DUTY - debug")
+    logger.debug "path_info: #{request.env['PATH_INFO']}"
 
     path_info = request.env["PATH_INFO"]
     rx = Regexp.new("^(.*)/([^/]*)$")
@@ -54,13 +53,20 @@ class App < Sinatra::Base
     begin
       contents = getDiskFile(file_request)
     rescue Errno::EISDIR => isdir_err
-      #puts "isdir_err exception: [#{isdir_err}]"
+      logger.warn "isdir_err exception: [#{isdir_err}]"
     rescue Exception => exp
-      #puts "getDiskFile exception: [#{exp.inspect}] class: [#{$!}]"
+      logger.warn "getDiskFile exception: [#{exp.inspect}] class: [#{$!}]"
     end
+
+    logger.debug "file: #{file_request} contents: #{contents}"
 
     halt 404 if contents.nil?
 
     contents
   end
+
+  post '*' do
+
+  end
+
 end

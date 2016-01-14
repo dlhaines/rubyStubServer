@@ -11,10 +11,13 @@ corresponding elements of the file name.  If there is
 not a matching file then the default file for that directory will be used.
 
 Multiple stub servers can be run on different ports in order to stub
-out multiple dependencies.
+out multiple dependencies.  Multiple dependencies can be served from the same stub server as long as the URL spaces
+are separate.
 
 # LIMITATIONS
 The server is only partly implemented.  Running the tests will show a list of potential / upcoming changes.
+
+Major limitations are:
 
 * Only json files are currently supported.
 * Query parameters are ignored. 
@@ -36,7 +39,7 @@ install method.  See https://rvm.io/
 > gem install bundler
 
 
-## Stub server installtion
+## Stub server installation
 When installing / updating the stub server do the following steps:
 
 1.  choose your working directory and make sure you have a copy of the
@@ -61,7 +64,7 @@ look for files.
 The default values are:
 
 * port - 9292
-* directory - <startup directory>/test/test-files/data
+* directory - \<startup directory\>/test/test-files/data
 
 The defaults are suitable for running the test queries below.
 

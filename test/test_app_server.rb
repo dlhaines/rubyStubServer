@@ -80,6 +80,37 @@ class AppServerTest < Minitest::Test
           assert_equal '["subdir/subdir2/exists.json"]', last_response.body.chomp, "has expected contents"
         end
 
+        should "get default file 2 directories deep no extension" do
+          get "/subdir/subdir2/exists"
+
+          assert_equal 200, last_response.status, "return exact file"
+          refute_nil last_response.body, "body exists"
+          refute_empty last_response.body, "existing file has contents"
+          assert_equal '["subdir/subdir2/exists"]', last_response.body.chomp, "has expected contents"
+        end
+
+      end
+
+      context ">HAVE QUERY PARAMETERS" do
+        should "get file ignoring query parameters" do
+          get "/subdir/subdir2/exists.json?IGNORE=ME"
+
+          assert_equal 200, last_response.status, "return exact file with query parameters"
+          refute_nil last_response.body, "body exists"
+          refute_empty last_response.body, "existing file has contents"
+          assert_equal '["subdir/subdir2/exists.json"]', last_response.body.chomp, "has expected contents"
+        end
+      end
+
+      context ">HAVE QUERY PARAMETERS NO EXTENSION" do
+        should "get file ignoring query parameters" do
+          get "/subdir/subdir2/exists.json?IGNORE=ME"
+
+          assert_equal 200, last_response.status, "return exact file with query parameters"
+          refute_nil last_response.body, "body exists"
+          refute_empty last_response.body, "existing file has contents"
+          assert_equal '["subdir/subdir2/exists.json"]', last_response.body.chomp, "has expected contents"
+        end
       end
 
     end

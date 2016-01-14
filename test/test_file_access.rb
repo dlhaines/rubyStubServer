@@ -34,6 +34,36 @@ class FileAccessTest < Minitest::Test
         s = @m.getDiskFileName(@test_file_directory, "/subdir", "missing.json")
         assert_equal "#{@test_file_directory}/subdir/default.json", s, "use default file"
       end
+
+      should_eventually "file extension is optional" do
+
+      end
+    end
+
+
+    # For REST may have a subpath that should map to a file but still be able to be part of a path
+    # for different queries
+    context ">DISK DIRECTORY AND FILE SAME NAME" do
+      should_eventually "get back file if name is at end of request" do
+        s=@m.getDiskFileName(@test_file_directory, "/","maybedirectory")
+      end
+
+      should_eventually "get back sub file if a name is used as part of a path" do
+      end
+    #   should "get exact name for existing file" do
+    #     s = @m.getDiskFileName(@test_file_directory, "/not_empty", "exists.json")
+    #     assert_equal "#{@test_file_directory}/not_empty/exists.json", s, "existing file name"
+    #   end
+    #
+    #   should "get nil if no exact file and no default file" do
+    #     s = @m.getDiskFileName(@test_file_directory, "/not_empty", "missing.json")
+    #     assert_nil s, "no default file"
+    #   end
+    #
+    #   should "get name of default file if no exact file" do
+    #     s = @m.getDiskFileName(@test_file_directory, "/subdir", "missing.json")
+    #     assert_equal "#{@test_file_directory}/subdir/default.json", s, "use default file"
+    #   end
     end
 
     # actually get the file
