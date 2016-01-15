@@ -1,0 +1,25 @@
+Vagrant.configure("2") do |config|
+  
+  # virtualbox configuration
+  config.vm.provider "virtualbox" do |vb|
+    config.vm.box = "hashicorp/precise32"
+    config.vm.provision :shell, path: "bootstrap.sh"
+
+    config.vm.network :forwarded_port, host: 8080, guest: 80
+    config.vm.network :forwarded_port, host: 9090, guest: 8080
+    config.vm.network :forwarded_port, host: 9100, guest: 9100
+    config.vm.hostname = "StubServer"
+    config.vm.provision :shell, path: "install-rvm.sh", args: "stable", privileged: false
+    config.vm.provision :shell, path: "install-ruby.sh", args: "2.2.1 bundler", privileged: false
+    config.vm.provision :shell, path: "installRubyStub.sh", privileged: false
+  end
+
+  #################
+  #  config.ssh.insert_key=true
+  # docker configuration
+  ## may need pw: tcuser
+  #  config.vm.provider "docker" do |d|
+  #     d.build_dir = "."
+  #   end
+
+end

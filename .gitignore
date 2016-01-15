@@ -12,6 +12,7 @@
 .dat*
 .repl_history
 build/
+ARTIFACTS/
 
 ## Documentation cache and generated files:
 /.yardoc/

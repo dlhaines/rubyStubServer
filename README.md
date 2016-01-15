@@ -79,3 +79,17 @@ The defaults are suitable for running the test queries below.
 The server need not run on the same host as the consumer.  If ports
 are not open on the stub server then port forwarding can be used to make them available.
 
+### Port forwarding
+Use a command like the following. 
+> ssh durango.dsc.umich.edu -L 13306:localhost:3306 -n -N -f
+
+In more detail:
+> ssh **\<remote host\>** -L **\<localport to use\>:\<forwared host\>:\<forwareded port\>** -n -N -f
+
+The '-n -N -f' options allow the command to ask for authentication and then run in the background.
+
+Configuration of port forwarding can be confusing.  For local testing the appropriate command is likely to look very much like:
+> ssh durango.ctools.org -L 9100:localhost:9100 -n -N -f
+
+This will make the local 9100 port act as if it were the 9100 port on durango.  If the stub server is not running on durango
+and/or is not using port 9100 those command should be adjusted accordingly.
