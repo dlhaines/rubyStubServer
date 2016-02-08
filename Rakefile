@@ -7,10 +7,10 @@ task :default => ["test"]
 desc "Starts the default web server through rackup, set port and data directory via environment variables PORT and DATA_DIR.  E.g. task server PORT=6666 DATA_DIR=/etc/password"
 task :server do
 
-  ENV['PORT'] = '9292' if ENV['PORT'].nil?
+  ENV['PORT'] = '9100' if ENV['PORT'].nil?
   ENV['DATA_DIR'] = "#{Dir.pwd}/test/test-files/data" if ENV['DATA_DIR'].nil?
   puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}]"
-  %x[rackup -p #{ENV['PORT']}]
+  %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' ]
 end
 
 ######## Configure tests
@@ -51,5 +51,51 @@ namespace :test do
     t.verbose = true
   end
 end
+
+######################################################
+## commands to setup and run vagrant VM with Dashboard
+desc "### Commands to setup and run Vagrant VM for Dashboard testing"
+task :vagrant
+
+namespace :vagrant do
+  desc "Make the application build artifacts available for creating the VM"
+  task :get_artifacts do
+    sh "(cd vagrant; ./getArtifacts.sh)"
+  end
+
+  desc "Starts the Vagrant VM, creating it if necessary"
+  task :up => :get_artifacts do
+    sh "(cd vagrant; vagrant up)"
+  end
+
+  desc "Same as the halt task"
+  task :down => :halt
+
+  desc "Stop VM and destroy it"
+  task :destroy do
+    sh "(cd vagrant; vagrant destroy -f)"
+  end
+
+  desc "Halt (stop) the vagrant VM but do not delete it"
+  task :halt do
+    sh "(cd vagrant; vagrant halt)"
+  end
+
+  desc "Open a (debug) xterm to the vagrant VM, YMMV."
+  task :xterm do
+    sh "(cd vagrant; ./vagrantXterm.sh)"
+  end
+
+  desc "Open a ssh terminal connection to the vagrant VM."
+  task :ssh do
+    sh "(cd vagrant; vagrant ssh)"
+  end
+
+  desc "Reload changing into the existing VM.  Avoids redoing initial OS updates."
+  task :reload => :get_artifacts do
+    sh "(cd vagrant; vagrant reload --provision)"
+  end
+end
+
 
 #end
