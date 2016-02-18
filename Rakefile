@@ -4,23 +4,36 @@ require 'rake/testtask'
 task :default => ["test"]
 
 
-desc "Starts the default web server through rackup, set port and data directory via environment variables PORT and DATA_DIR.  E.g. task server PORT=6666 DATA_DIR=/etc/password"
-task :server do
+#### tasks to run default server
+desc "+++ Start and stop test server"
+task :server
 
-  ENV['PORT'] = '9100' if ENV['PORT'].nil?
-  ENV['DATA_DIR'] = "#{Dir.pwd}/test/test-files/data" if ENV['DATA_DIR'].nil?
-  puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}]"
-  %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' ]
+namespace :server do
+  desc "Starts the default stub web server through rackup, set port and data directory via environment variables PORT and DATA_DIR.  E.g. task server PORT=6666 DATA_DIR=/etc/password"
+  task :start do
+    ENV['PORT'] = '9100' if ENV['PORT'].nil?
+    ENV['DATA_DIR'] = "#{Dir.pwd}/test/test-files/data" if ENV['DATA_DIR'].nil?
+    puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}]"
+    %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --daemonize --pid tmp/pids/thin.pid]
+  end
+
+  desc "Stops the server started by server:start"
+  task :stop do
+    puts "Killing server with pid #{%x[cat tmp/pids/thin.pid]}"
+    %x[kill $(cat tmp/pids/thin.pid)]
+  end
+
 end
 
 ######## Configure tests
 
 # Run all tests if just specify the 'test' task.
+desc " Testing tasks"
 task :test => ["test:all"]
 
 # define the test tasks
 namespace :test do
-  desc "available tests are: [:test:all, :test:files]"
+  desc "+++ available tests are: [:test:all, :test:files]"
   task :all => [:files, :server, :TTD]
   
   ## specific tests
@@ -54,7 +67,7 @@ end
 
 ######################################################
 ## commands to setup and run vagrant VM with Dashboard
-desc "### Commands to setup and run Vagrant VM for Dashboard testing"
+desc "+++ Commands to setup and run Vagrant VM for Dashboard testing"
 task :vagrant
 
 namespace :vagrant do

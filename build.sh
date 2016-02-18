@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 PROJECT=rubyStubServer
 SRC_URL=git@github-dlh:dlhaines/${PROJECT}.git
-BRANCH=VAGRANT
+#BRANCH=VAGRANT
+BRANCH=master
 TMP_BUILD=$HOME/build.tmp
 ARTIFACTS_DIR=$(PWD)/ARTIFACTS
 
