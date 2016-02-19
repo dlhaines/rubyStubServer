@@ -55,7 +55,7 @@ server.
 
 ## Running the server
 The server is started by running:
-> rake server PORT=\<number\> DATA_DIR=\<directory\>
+> rake server PORT=\<number\> DATA_DIR=\<directory\> &
 
 The *port* determines where the server will be available.
 The *directory* determines where on disk the server will 
@@ -74,6 +74,23 @@ The defaults are suitable for running the test queries below.
 * localhost:9292/not\_empty/exists.json -> ["not_empty/exists.json"]
 * localhost:9292/subdir/get\_default\_file\_not\_exact\_file.json ->
 ["subdir/default.json"]
+
+## Stub configurations
+You should expect to configure the Stub server for your current testing needs. 
+To add a configuration simply put the required files in a directory available to the server and 
+pass that directory name to the server on startup.  The format of the directory and files is described above.
+A couple of standard / sample configurations are included in the build.  This allows
+trivial installation of a server for selected APIs uses.  It is easy to supply a new
+configuration for new needs.  Inclustion in the build is simply to provide examples.  They aren't
+complete implementations of anything.
+
+The current configurations included are:
+
+* canvas
+* demo01
+
+The Canvas configuration files are in standard/canvas directory.  These files include a *check.sh* 
+file that can be used as a quick local check to see if the stub server is working as expected.
 
 ## Running the server remotely
 The server need not run on the same host as the consumer.  If ports

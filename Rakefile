@@ -8,13 +8,24 @@ task :default => ["test"]
 desc "+++ Start and stop test server"
 task :server
 
+# can't get daemonize and logging to work, so use this
+#rake server:start_canvas &
+
 namespace :server do
   desc "Starts the default stub web server through rackup, set port and data directory via environment variables PORT and DATA_DIR.  E.g. task server PORT=6666 DATA_DIR=/etc/password"
   task :start do
     ENV['PORT'] = '9100' if ENV['PORT'].nil?
     ENV['DATA_DIR'] = "#{Dir.pwd}/test/test-files/data" if ENV['DATA_DIR'].nil?
     puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}]"
-    %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --daemonize --pid tmp/pids/thin.pid]
+    %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --pid tmp/pids/thin.pid >| tmp/log/stub.$$.log 2>&1]
+  end
+
+  desc "start standard canvas on localhost 9100"
+  task :start_canvas do
+    ENV['PORT'] = '9100' if ENV['PORT'].nil?
+    ENV['DATA_DIR'] = "#{Dir.pwd}/standard/canvas" if ENV['DATA_DIR'].nil?
+    puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}]"
+    %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --pid tmp/pids/thin.pid >| tmp/log/stub.$$.log 2>&1]
   end
 
   desc "Stops the server started by server:start"
@@ -104,7 +115,7 @@ namespace :vagrant do
     sh "(cd vagrant; vagrant ssh)"
   end
 
-  desc "Reload changing into the existing VM.  Avoids redoing initial OS updates."
+  desc "Reload changes into the existing VM.  Avoids redoing initial OS updates."
   task :reload => :get_artifacts do
     sh "(cd vagrant; vagrant reload --provision)"
   end

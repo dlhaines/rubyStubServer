@@ -17,6 +17,7 @@ GEM
     daemons (1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.5)
+    escape_utils (1.2.0)
     eventmachine (1.0.9.1)
     ffi (1.9.10)
     hashdiff (0.2.3)
@@ -95,6 +96,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  escape_utils
   minitest
   minitest-reporters (>= 0.5.0)
   rack

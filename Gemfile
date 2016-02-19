@@ -4,6 +4,7 @@ gem 'slim'
 gem 'rack'
 
 gem 'thin'
+gem 'escape_utils'
 
 group :test do
   gem 'test-unit'
