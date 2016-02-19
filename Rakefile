@@ -1,5 +1,10 @@
 require 'rake/testtask'
 
+#### TTD
+# - share the startup code between server configurations
+# - print settings
+# - allow multiple servers?
+
 # default is to test
 task :default => ["test"]
 
@@ -13,18 +18,22 @@ task :server
 
 namespace :server do
   desc "Starts the default stub web server through rackup, set port and data directory via environment variables PORT and DATA_DIR.  E.g. task server PORT=6666 DATA_DIR=/etc/password"
-  task :start do
+  task :start_demo01 do
+    ENV['MIN_WAIT'] = '0.0' if ENV['MIN_WAIT'].nil?
+    ENV['MAX_WAIT'] = '0.0' if ENV['MAX_WAIT'].nil?
     ENV['PORT'] = '9100' if ENV['PORT'].nil?
     ENV['DATA_DIR'] = "#{Dir.pwd}/test/test-files/data" if ENV['DATA_DIR'].nil?
-    puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}]"
+    puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}] MIN_WAIT: [#{ENV['MIN_WAIT']}] MAX_WAIT: [#{ENV['MAX_WAIT']}]"
     %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --pid tmp/pids/thin.pid >| tmp/log/stub.$$.log 2>&1]
   end
 
   desc "start standard canvas on localhost 9100"
   task :start_canvas do
+    ENV['MIN_WAIT'] = '0.0' if ENV['MIN_WAIT'].nil?
+    ENV['MAX_WAIT'] = '0.0' if ENV['MAX_WAIT'].nil?
     ENV['PORT'] = '9100' if ENV['PORT'].nil?
     ENV['DATA_DIR'] = "#{Dir.pwd}/standard/canvas" if ENV['DATA_DIR'].nil?
-    puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}]"
+    puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}] MIN_WAIT: [#{ENV['MIN_WAIT']}] MAX_WAIT: [#{ENV['MAX_WAIT']}]"
     %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --pid tmp/pids/thin.pid >| tmp/log/stub.$$.log 2>&1]
   end
 
@@ -42,7 +51,7 @@ end
 desc " Testing tasks"
 task :test => ["test:all"]
 
-# define the test tasks
+# define the test taskso
 namespace :test do
   desc "+++ available tests are: [:test:all, :test:files]"
   task :all => [:files, :server, :TTD]
@@ -120,6 +129,5 @@ namespace :vagrant do
     sh "(cd vagrant; vagrant reload --provision)"
   end
 end
-
 
 #end

@@ -6,9 +6,11 @@ This implements a simple file-based stub provider. Requests are mapped from an U
 URL elements map to directories. File names are derived from the trailing file name on the url.  
 If no matching file exists in the matching directory
 then the file *default.<extension>* in the directory is used if it exists.   If neither exists then a 404 is returned.
-File names can also contain values for query parameters. Query parameters are sorted and values are matched to 
+
+File names can also contain values for query parameters.  They are currently ignored. 
+A future feature will examine query parameters, sort them and add values to 
 corresponding elements of the file name.  If there is
-not a matching file then the default file for that directory will be used.
+no matching file then the default file for that directory will be used.
 
 Multiple stub servers can be run on different ports in order to stub
 out multiple dependencies.  Multiple dependencies can be served from the same stub server as long as the URL spaces
@@ -21,7 +23,6 @@ Major limitations are:
 
 * Only json files are currently supported.
 * Query parameters are ignored. 
-* There is no timing, count, or delay functionality.
 
 # Running the stub server:
 
@@ -42,8 +43,7 @@ install method.  See https://rvm.io/
 ## Stub server installation
 When installing / updating the stub server do the following steps:
 
-1.  choose your working directory and make sure you have a copy of the
-server. 
+1.  choose your working directory and check out the server code.
 > git clone https://github.com/dlhaines/rubyStubServer.git
 1.  checkout the appropriate branch (currently master)
 1.  make sure your copy is up to date.
@@ -52,30 +52,34 @@ server.
 > bundle install
 1. Check the installation by running tests:
 > rake test
+1. Make sure that there is a data directory with directories and files matching the stub needs for the
+ calls to the server.  The required format is described above.  The code comes with a couple of 
+ build in stub configurations.  One is *demo/demo01*.  One is *standard/canvas*.
 
-## Running the server
+## Starting the server
 The server is started by running:
+> rake server:start_name &
+
+Two server configurations are provided: *start_demo01*, and *start_canvas*.
+
+Environment variables may be used to further customize the server.  These values can be 
+set on the server invocation.  E.g.
+
 > rake server PORT=\<number\> DATA_DIR=\<directory\> &
 
-The *port* determines where the server will be available.
-The *directory* determines where on disk the server will 
-look for files.  
+The *PORT* determines where the server will be available.
+The *DATA_DIR* determines where on disk the server will 
+look for files.
+*MIN_WAIT* is the minimum time that the server will wait before returning a file.
+*MAX_WAIT* is the maximum time that the server will wait before returning a file.
 
 The default values are:
 
-* port - 9292
+* port - 9100
 * directory - \<startup directory\>/test/test-files/data
+* MIN_WAIT, MAX_WAIT - 0
 
-The defaults are suitable for running the test queries below.
-
-* localhost:9292/ -> (404, not found)
-* localhost:9292/exists -> ["default.json]"
-* localhost:9292/exists.json -> ["exists.json]"
-* localhost:9292/not\_empty/exists.json -> ["not_empty/exists.json"]
-* localhost:9292/subdir/get\_default\_file\_not\_exact\_file.json ->
-["subdir/default.json"]
-
-## Stub configurations
+## Stub file configurations
 You should expect to configure the Stub server for your current testing needs. 
 To add a configuration simply put the required files in a directory available to the server and 
 pass that directory name to the server on startup.  The format of the directory and files is described above.
@@ -89,24 +93,48 @@ The current configurations included are:
 * canvas
 * demo01
 
-The Canvas configuration files are in standard/canvas directory.  These files include a *check.sh* 
-file that can be used as a quick local check to see if the stub server is working as expected.
+These configurations include a *check.sh* bash script in the data directory.  These are meant
+as a quick sanity check to see if a configured server is running as expected.  They are not meant 
+to be a set of automated quality tests.
 
-## Running the server remotely
+## Statistics
+
+A request to the URL <server:port>/status.json will return the json described below.  The json extension is optional
+but the results are always in JSON format. Entries starting with CONFIG_ are informational. CONFIG_WAIT_RANGE gives an 
+array of the least and then longest amount of time that the server will wait before returning a response.  
+CONFIG_START_NOW_TIME gives the server startup time and the current time of this request for statistics.  
+
+For each URL request there will be an entry that gives the url with a value containing a 
+list of the count of the number of requests and then the total wait time for this request.
+CONFIG_DATA_DIR gives the disk directory containing the stub directories and files.
+
+Sample JSON output: 
+
+    {
+    	"CONFIG_WAIT_RANGE": [0.0, 0.0],
+    	"CONFIG_DATA_DIR": "/Users/dlhaines/dev/GITHUB/dlh-umich.edu/rubyStubServer/test/test-files/data",
+    	"CONFIG_START_NOW_TIME": ["2016-02-19T15:31:08-05:00", "2016-02-19T16:11:00-05:00"],
+    	"/": [12, 0.0],
+    	"/exists": [8, 0.0],
+    	"/exists.json": [7, 0.0],
+    	"/exists.json.XXX": [1, 0.0],
+    	"/exists.XXX": [1, 0.0],
+    	"/ohcrap": [1, 0.0],
+    	"/ohcrap/birds": [4, 0.0],
+    	"/not\\_empty/exists.json": [1, 0.0],
+    	"/not_empty/exists.json": [2, 0.0]
+    }
+
+## Accessing the server remotely
 The server need not run on the same host as the consumer.  If ports
 are not open on the stub server then port forwarding can be used to make them available.
 
 ### Port forwarding
-Use a command like the following. 
-> ssh durango.dsc.umich.edu -L 13306:localhost:3306 -n -N -f
-
-In more detail:
-> ssh **\<remote host\>** -L **\<localport to use\>:\<forwared host\>:\<forwareded port\>** -n -N -f
-
-The '-n -N -f' options allow the command to ask for authentication and then run in the background.
 
 Configuration of port forwarding can be confusing.  For local testing the appropriate command is likely to look very much like:
 > ssh durango.ctools.org -L 9100:localhost:9100 -n -N -f
 
 This will make the local 9100 port act as if it were the 9100 port on durango.  If the stub server is not running on durango
 and/or is not using port 9100 those command should be adjusted accordingly.
+
+The '-n -N -f' options allow the command to ask for authentication and then run in the background.
