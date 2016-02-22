@@ -17,30 +17,37 @@ task :server
 #rake server:start_canvas &
 
 namespace :server do
+
+	  directory './tmp/pids'
+	  directory './tmp/log'
+
+	  desc "Create required server directories"
+	  task :directories => ['./tmp/pids', './tmp/log']
+
   desc "Starts the default stub web server through rackup, set port and data directory via environment variables PORT and DATA_DIR.  E.g. task server PORT=6666 DATA_DIR=/etc/password"
-  task :start_demo01 do
+  task :start_demo01 => [:directories] do
     ENV['MIN_WAIT'] = '0.0' if ENV['MIN_WAIT'].nil?
     ENV['MAX_WAIT'] = '0.0' if ENV['MAX_WAIT'].nil?
     ENV['PORT'] = '9100' if ENV['PORT'].nil?
     ENV['DATA_DIR'] = "#{Dir.pwd}/test/test-files/data" if ENV['DATA_DIR'].nil?
     puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}] MIN_WAIT: [#{ENV['MIN_WAIT']}] MAX_WAIT: [#{ENV['MAX_WAIT']}]"
-    %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --pid tmp/pids/thin.pid >| tmp/log/stub.$$.log 2>&1]
+    %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --pid ./tmp/pids/thin.pid >| ./tmp/log/stub.$$.log 2>&1]
   end
 
   desc "start standard canvas on localhost 9100"
-  task :start_canvas do
+  task :start_canvas => [:directories] do
     ENV['MIN_WAIT'] = '0.0' if ENV['MIN_WAIT'].nil?
     ENV['MAX_WAIT'] = '0.0' if ENV['MAX_WAIT'].nil?
     ENV['PORT'] = '9100' if ENV['PORT'].nil?
     ENV['DATA_DIR'] = "#{Dir.pwd}/standard/canvas" if ENV['DATA_DIR'].nil?
     puts "PORT: [#{ENV['PORT']}] DATA_DIR: [#{ENV['DATA_DIR']}] MIN_WAIT: [#{ENV['MIN_WAIT']}] MAX_WAIT: [#{ENV['MAX_WAIT']}]"
-    %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --pid tmp/pids/thin.pid >| tmp/log/stub.$$.log 2>&1]
+    %x[rackup -s thin -p #{ENV['PORT']} -o '0.0.0.0' --pid ./tmp/pids/thin.pid >| ./tmp/log/stub.$$.log 2>&1]
   end
 
   desc "Stops the server started by server:start"
   task :stop do
-    puts "Killing server with pid #{%x[cat tmp/pids/thin.pid]}"
-    %x[kill $(cat tmp/pids/thin.pid)]
+    puts "Killing server with pid #{%x[cat ./tmp/pids/thin.pid]}"
+    %x[kill $(cat ./tmp/pids/thin.pid)]
   end
 
 end
