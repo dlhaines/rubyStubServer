@@ -1,15 +1,15 @@
 require_relative 'test_helper'
 require 'rack/test'
 require_relative '../stubToDisk'
-#require_relative '../stub_helpers'
 
 class AppServerTest < Minitest::Test
 
   include Rack::Test::Methods
 
   def app
-    # Must return the application
-    App.new(TestHelper.findTestFileDirectory+"/data")
+    ENV['DATA_DIR'] = TestHelper.findTestFileDirectory+"/data"
+    # Must return the application object
+    App.new()
   end
 
   context "APP SERVER" do

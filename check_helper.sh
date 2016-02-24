@@ -17,7 +17,7 @@
 # - print only failed urls or all URLs as requested.
 # - verbose option
 
-if [ "$#" -ne 0 ]; then
+if [ "$1" == '-h' ]; then
     echo "$0: Check that a set of urls are successfully retrieved by curl from the stub server."
     exit 1;
 fi
