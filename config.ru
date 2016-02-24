@@ -24,6 +24,6 @@ data_dir = ENV['DATA_DIR']
 # use Rack::Logger, Logger::ERROR
 # use Rack::CommonLogger
 
-# The value of ENV['PORT'] is used by rackup.  The data directory value is passed here to the server.
-run App.new(data_dir)
+# Pass configuration in via environment variables.
+run App.new()
 

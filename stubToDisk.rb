@@ -31,21 +31,8 @@ class App < Sinatra::Base
   # Set URL count hash to have default 0,0 list entry.
   set :query_stats, Hash.new { |h, k| h[k] = [0, 0] }
 
-  # get the min/max wait from environment.
-  # get environment variable by accessing ENV['']
-
-  min_wait = ENV['MIN_WAIT'].to_f || 0.0
-  max_wait = ENV['MAX_WAIT'].to_f || 0.0
-  query_stats[:CONFIG_WAIT_RANGE] = [min_wait, max_wait]
-  query_stats[:CONFIG_DATA_DIR] = ENV['DATA_DIR'] || "."
-
   # record the start time
   query_stats[:CONFIG_START_NOW_TIME] = [Time.now().to_time.iso8601,0]
-
-  #base_dir = ENV['DATA_DIR']
-
-
-  #ENV.keys.sort.each {|k| puts "#{k}: #{ENV[k]}"}
 
   configure do
     #set :logging, Logger::INFO
@@ -53,14 +40,18 @@ class App < Sinatra::Base
 
   end
 
-  # Add explicit initialize method so can pass in startup parameters.  Those
-  # parameters are referenced as instance variables.
-  #def initialize(base_dir)
-  def initialize(base_dir)
+  # Add explicit initialize method.  It will set values from
+  # environment variables when specified.
+
+  def initialize()
     super
-    #@base_dir = base_dir
-    #logger.debug "HOWDY"
-    #logger.info "initial url stats: #{stats.to_json}"
+    puts "init: DATA_DIR: [#{ENV['DATA_DIR']}]"
+    query_stats = settings.query_stats
+    min_wait = ENV['MIN_WAIT'].to_f || 0.0
+    max_wait = ENV['MAX_WAIT'].to_f || 0.0
+    query_stats[:CONFIG_WAIT_RANGE] = [min_wait, max_wait]
+    query_stats[:CONFIG_DATA_DIR] = ENV['DATA_DIR'] || "."
+
   end
 
   # Treat status requests as special.  NOTE: should give normal status data.
@@ -89,7 +80,6 @@ class App < Sinatra::Base
 
     file_path, file_name = file_match[1], file_match[2]
 
-    #file_request = getDiskFileName(@base_dir, file_path, file_name)
     file_request = getDiskFileName(stats[:CONFIG_DATA_DIR], file_path, file_name)
 
     min_wait, max_wait = stats[:CONFIG_WAIT_RANGE]
