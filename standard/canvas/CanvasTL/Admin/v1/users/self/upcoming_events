@@ -771,7 +771,7 @@
 		"id": 1818,
 		"assignment_id": 10727,
 		"title": "1 student",
-		"due_at": "2016-01-16T04:59:00Z",
+		"due_at": "2016-03-20T04:59:00Z",
 		"all_day": true,
 		"all_day_date": "2016-01-15",
 		"unlock_at": null,
@@ -793,7 +793,7 @@
 	"assignment": {
 		"id": 48346,
 		"description": "<p><span style=\"font-size: 14px;\">The purpose of this assignment is to allow you to reflect on your personal attributes (strengths and challenges) that you bring to a team. Recognition of your strengths and areas for improvement will help you better function on a team. Complete this assignment by the due date in order to receive credit. Late work is not accepted. </span></p>\n<p> </p>\n<p>Used with permission from Pollard et al (2004, 2005):</p>\n<p style=\"font-size: 11pt; font-family: Calibri, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-align: start; text-indent: 0px; white-space: normal;\"><span style=\"font-size: 12px;\">Pollard KC, Miers ME, Gilchrist M (2004)  Collaborative learning for collaborative working?  Initial findings from a longitudinal study of health and social care students  <em>Health and Social Care in the Community  </em>12(4)  346-358</span></p>\n<p style=\"font-size: 11pt; font-family: Calibri, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-align: start; text-indent: 0px; white-space: normal;\"><span style=\"font-size: 12px;\"><span style=\"color: black;\">Pollard KC, Miers ME, Gilchrist </span>M  (<a style=\"color: purple; text-decoration: underline;\" href=\"https://email.med.umich.edu/owa/redir.aspx?C=6NdzVTAqokK77J4iGVyYOEXcXBwU-9EIFNHxUlhVn1IHZY_to1g_sCOGRBZ4-BF0ZDQT2DahG7E.&amp;URL=http%3a%2f%2fhsc.uwe.ac.uk%2fpublications%2fstaff%2feditpub.asp%3fpubid%3d1777%26enter%3dEdit\" target=\"_blank\"><span style=\"text-decoration: none;\"><span style=\"color: windowtext;\">2005</span></span></a>)<span style=\"color: black;\"> Second year scepticism: pre-qualifying health and social care students' midpoint self-assessment, attitudes and perceptions concerning interprofessional learning and working   <em>Journal of Interprofessional Care </em> 19(3)  251-268</span></span></p>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-03-21T17:00:00Z",
 		"unlock_at": "2016-01-11T13:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 10,
@@ -844,7 +844,7 @@
 	"assignment": {
 		"id": 44025,
 		"description": "<p><span style=\"font-size: 14px;\">This make-up assignment is for students who missed the first week of the Introductory Module (if you were in class you do not need to do this assignment). Note that make-up assignments are only allowed for excused absences, following the absence policy for your school's program. If you missed class you must complete the google form on the Canvas page with this week's materials in order to <span style=\"background-color: #ffff00;\">XXXXX<span style=\"background-color: #ffffff;\">. This assignment </span></span></span><span style=\"font-size: 14px;\">must be submitted here by the due date in order to receive credit. Late submissions will not be accepted. Questions about this assignment should be directed to Dr Sweet (<a href=\"mailto:gsweet@umich.edu\">gsweet@umich.edu</a>).</span></p>\r\n<p>The purpose of this course is to help prepare you to work as an effective member of an interprofessional healthcare team. For the duration of the semester you will work with your assigned team members to solve complex cases. Understanding the different professional roles of your team members is one essential element to being able to work on a team. The focus of this week’s class was on meeting your team members and beginning to learn about the different professional roles.</p>\r\n<p><strong>Directions:</strong></p>\r\n<ul>\r\n<li>Review the in-class slides and ensure you understand the essential details of the course</li>\r\n<ul>\r\n<li><span style=\"color: #ff0000;\">POST slides</span></li>\r\n</ul>\r\n<li>Review the materials on Belbin’s Team Roles and identify the role that best fits you within each of the three categories</li>\r\n<ul>\r\n<li><strong><a id=\"\" class=\" instructure_scribd_file instructure_file_link\" title=\"Belbin Model of Team Roles_2016.pdf\" href=\"https://api-qa-gw.its.umich.edu/courses/208/files/876893/download?verifier=buL7F5HhQ7KR7xqxMhWAo15iWe57Qv1GrA8kdovT&amp;wrap=1\" data-api-endpoint=\"https://api-qa-gw.its.umich.edu/api/v1/courses/208/files/876893\" data-api-returntype=\"File\">Belbin Model of Team Roles.pdf</a></strong></li>\r\n</ul>\r\n<li>Complete the assignment on professional roles <span style=\"color: #ff0000;\">linked here</span> </li>\r\n</ul>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-03-22T17:00:00Z",
 		"unlock_at": "2016-01-13T22:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 0,
@@ -892,7 +892,7 @@
 	"assignment": {
 		"id": 56498,
 		"description": null,
-		"due_at": "2016-01-20T22:00:00Z",
+		"due_at": "2016-03-23T22:00:00Z",
 		"unlock_at": null,
 		"lock_at": null,
 		"points_possible": 5,
@@ -940,7 +940,7 @@
 	"assignment": {
 		"id": 44022,
 		"description": "<p><span>Complete the assignment by the due date in order to receive credit. This assignment is due at the same time for all students, even those who will need to complete the make-up assignment. Late work is not accepted. </span></p>\r\n<ul>\r\n<li><strong><a id=\"\" class=\" instructure_scribd_file instructure_file_link\" title=\"Intro_Week#2_Prework_WhatWentWrong_draft.docx\" href=\"https://api-qa-gw.its.umich.edu/courses/208/files/701035/download?verifier=d9kiWx6Ktc6Fpd0szT0SdiqoPvR50zUvK49zuTPU&amp;wrap=1\" data-api-endpoint=\"https://api-qa-gw.its.umich.edu/api/v1/courses/208/files/701035\" data-api-returntype=\"File\">When Things Go Wrong Prework.docx</a></strong></li>\r\n</ul>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-03-24T17:00:00Z",
 		"unlock_at": "2016-01-11T17:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 5,
@@ -990,7 +990,7 @@
 	"assignment": {
 		"id": 10727,
 		"description": "<div class=\"textPanel\">\r\n<p>This assignment will let you practice uploading a document to be graded. Notice that the rubric at the bottom of the page outlines the expectations for the assignment.<br><br> Instructions:</p>\r\n<ul>\n<li>Open Microsoft Word.</li>\r\n<li>Type your name and the date on a document.</li>\r\n<li>Save the document.</li>\r\n<li>Submit it to this assignment as an attachment. (The \"submit\" button is in the upper-right corner of the screen.)</li>\r\n</ul>\n</div>\r\n<p>If you need further help, see these instructions:</p>\r\n<ul>\n<li><a id=\"\" class=\"\" title=\"\" href=\"https://community.canvaslms.com/docs/DOC-3123\" target=\"\">Viewing assignments</a></li>\r\n<li><a id=\"\" class=\"\" title=\"\" href=\"https://community.canvaslms.com/docs/DOC-1290\" target=\"\">Submitting assignments</a></li>\r\n</ul>",
-		"due_at": "2016-01-16T04:59:00Z",
+		"due_at": "2016-03-25T04:59:00Z",
 		"unlock_at": null,
 		"lock_at": null,
 		"points_possible": 10,
@@ -1064,7 +1064,7 @@
 		"id": 1818,
 		"assignment_id": 10727,
 		"title": "1 student",
-		"due_at": "2016-01-16T04:59:00Z",
+		"due_at": "2016-03-25T04:59:00Z",
 		"all_day": true,
 		"all_day_date": "2016-01-15",
 		"unlock_at": null,
@@ -1086,7 +1086,7 @@
 	"assignment": {
 		"id": 48346,
 		"description": "<p><span style=\"font-size: 14px;\">The purpose of this assignment is to allow you to reflect on your personal attributes (strengths and challenges) that you bring to a team. Recognition of your strengths and areas for improvement will help you better function on a team. Complete this assignment by the due date in order to receive credit. Late work is not accepted. </span></p>\n<p> </p>\n<p>Used with permission from Pollard et al (2004, 2005):</p>\n<p style=\"font-size: 11pt; font-family: Calibri, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-align: start; text-indent: 0px; white-space: normal;\"><span style=\"font-size: 12px;\">Pollard KC, Miers ME, Gilchrist M (2004)  Collaborative learning for collaborative working?  Initial findings from a longitudinal study of health and social care students  <em>Health and Social Care in the Community  </em>12(4)  346-358</span></p>\n<p style=\"font-size: 11pt; font-family: Calibri, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-align: start; text-indent: 0px; white-space: normal;\"><span style=\"font-size: 12px;\"><span style=\"color: black;\">Pollard KC, Miers ME, Gilchrist </span>M  (<a style=\"color: purple; text-decoration: underline;\" href=\"https://email.med.umich.edu/owa/redir.aspx?C=6NdzVTAqokK77J4iGVyYOEXcXBwU-9EIFNHxUlhVn1IHZY_to1g_sCOGRBZ4-BF0ZDQT2DahG7E.&amp;URL=http%3a%2f%2fhsc.uwe.ac.uk%2fpublications%2fstaff%2feditpub.asp%3fpubid%3d1777%26enter%3dEdit\" target=\"_blank\"><span style=\"text-decoration: none;\"><span style=\"color: windowtext;\">2005</span></span></a>)<span style=\"color: black;\"> Second year scepticism: pre-qualifying health and social care students' midpoint self-assessment, attitudes and perceptions concerning interprofessional learning and working   <em>Journal of Interprofessional Care </em> 19(3)  251-268</span></span></p>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-03-26T17:00:00Z",
 		"unlock_at": "2016-01-11T13:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 10,
@@ -1137,7 +1137,7 @@
 	"assignment": {
 		"id": 44025,
 		"description": "<p><span style=\"font-size: 14px;\">This make-up assignment is for students who missed the first week of the Introductory Module (if you were in class you do not need to do this assignment). Note that make-up assignments are only allowed for excused absences, following the absence policy for your school's program. If you missed class you must complete the google form on the Canvas page with this week's materials in order to <span style=\"background-color: #ffff00;\">XXXXX<span style=\"background-color: #ffffff;\">. This assignment </span></span></span><span style=\"font-size: 14px;\">must be submitted here by the due date in order to receive credit. Late submissions will not be accepted. Questions about this assignment should be directed to Dr Sweet (<a href=\"mailto:gsweet@umich.edu\">gsweet@umich.edu</a>).</span></p>\r\n<p>The purpose of this course is to help prepare you to work as an effective member of an interprofessional healthcare team. For the duration of the semester you will work with your assigned team members to solve complex cases. Understanding the different professional roles of your team members is one essential element to being able to work on a team. The focus of this week’s class was on meeting your team members and beginning to learn about the different professional roles.</p>\r\n<p><strong>Directions:</strong></p>\r\n<ul>\r\n<li>Review the in-class slides and ensure you understand the essential details of the course</li>\r\n<ul>\r\n<li><span style=\"color: #ff0000;\">POST slides</span></li>\r\n</ul>\r\n<li>Review the materials on Belbin’s Team Roles and identify the role that best fits you within each of the three categories</li>\r\n<ul>\r\n<li><strong><a id=\"\" class=\" instructure_scribd_file instructure_file_link\" title=\"Belbin Model of Team Roles_2016.pdf\" href=\"https://api-qa-gw.its.umich.edu/courses/208/files/876893/download?verifier=buL7F5HhQ7KR7xqxMhWAo15iWe57Qv1GrA8kdovT&amp;wrap=1\" data-api-endpoint=\"https://api-qa-gw.its.umich.edu/api/v1/courses/208/files/876893\" data-api-returntype=\"File\">Belbin Model of Team Roles.pdf</a></strong></li>\r\n</ul>\r\n<li>Complete the assignment on professional roles <span style=\"color: #ff0000;\">linked here</span> </li>\r\n</ul>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-03-27T17:00:00Z",
 		"unlock_at": "2016-01-13T22:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 0,
@@ -1185,7 +1185,7 @@
 	"assignment": {
 		"id": 56498,
 		"description": null,
-		"due_at": "2016-01-20T22:00:00Z",
+		"due_at": "2016-03-28T22:00:00Z",
 		"unlock_at": null,
 		"lock_at": null,
 		"points_possible": 5,
@@ -1233,7 +1233,7 @@
 	"assignment": {
 		"id": 44022,
 		"description": "<p><span>Complete the assignment by the due date in order to receive credit. This assignment is due at the same time for all students, even those who will need to complete the make-up assignment. Late work is not accepted. </span></p>\r\n<ul>\r\n<li><strong><a id=\"\" class=\" instructure_scribd_file instructure_file_link\" title=\"Intro_Week#2_Prework_WhatWentWrong_draft.docx\" href=\"https://api-qa-gw.its.umich.edu/courses/208/files/701035/download?verifier=d9kiWx6Ktc6Fpd0szT0SdiqoPvR50zUvK49zuTPU&amp;wrap=1\" data-api-endpoint=\"https://api-qa-gw.its.umich.edu/api/v1/courses/208/files/701035\" data-api-returntype=\"File\">When Things Go Wrong Prework.docx</a></strong></li>\r\n</ul>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-03-29T17:00:00Z",
 		"unlock_at": "2016-01-11T17:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 5,
@@ -1283,7 +1283,7 @@
 	"assignment": {
 		"id": 10727,
 		"description": "<div class=\"textPanel\">\r\n<p>This assignment will let you practice uploading a document to be graded. Notice that the rubric at the bottom of the page outlines the expectations for the assignment.<br><br> Instructions:</p>\r\n<ul>\n<li>Open Microsoft Word.</li>\r\n<li>Type your name and the date on a document.</li>\r\n<li>Save the document.</li>\r\n<li>Submit it to this assignment as an attachment. (The \"submit\" button is in the upper-right corner of the screen.)</li>\r\n</ul>\n</div>\r\n<p>If you need further help, see these instructions:</p>\r\n<ul>\n<li><a id=\"\" class=\"\" title=\"\" href=\"https://community.canvaslms.com/docs/DOC-3123\" target=\"\">Viewing assignments</a></li>\r\n<li><a id=\"\" class=\"\" title=\"\" href=\"https://community.canvaslms.com/docs/DOC-1290\" target=\"\">Submitting assignments</a></li>\r\n</ul>",
-		"due_at": "2016-01-16T04:59:00Z",
+		"due_at": "2016-03-30T04:59:00Z",
 		"unlock_at": null,
 		"lock_at": null,
 		"points_possible": 10,
@@ -1357,7 +1357,7 @@
 		"id": 1818,
 		"assignment_id": 10727,
 		"title": "1 student",
-		"due_at": "2016-01-16T04:59:00Z",
+		"due_at": "2016-03-30T04:59:00Z",
 		"all_day": true,
 		"all_day_date": "2016-01-15",
 		"unlock_at": null,
@@ -1379,7 +1379,7 @@
 	"assignment": {
 		"id": 48346,
 		"description": "<p><span style=\"font-size: 14px;\">The purpose of this assignment is to allow you to reflect on your personal attributes (strengths and challenges) that you bring to a team. Recognition of your strengths and areas for improvement will help you better function on a team. Complete this assignment by the due date in order to receive credit. Late work is not accepted. </span></p>\n<p> </p>\n<p>Used with permission from Pollard et al (2004, 2005):</p>\n<p style=\"font-size: 11pt; font-family: Calibri, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-align: start; text-indent: 0px; white-space: normal;\"><span style=\"font-size: 12px;\">Pollard KC, Miers ME, Gilchrist M (2004)  Collaborative learning for collaborative working?  Initial findings from a longitudinal study of health and social care students  <em>Health and Social Care in the Community  </em>12(4)  346-358</span></p>\n<p style=\"font-size: 11pt; font-family: Calibri, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-align: start; text-indent: 0px; white-space: normal;\"><span style=\"font-size: 12px;\"><span style=\"color: black;\">Pollard KC, Miers ME, Gilchrist </span>M  (<a style=\"color: purple; text-decoration: underline;\" href=\"https://email.med.umich.edu/owa/redir.aspx?C=6NdzVTAqokK77J4iGVyYOEXcXBwU-9EIFNHxUlhVn1IHZY_to1g_sCOGRBZ4-BF0ZDQT2DahG7E.&amp;URL=http%3a%2f%2fhsc.uwe.ac.uk%2fpublications%2fstaff%2feditpub.asp%3fpubid%3d1777%26enter%3dEdit\" target=\"_blank\"><span style=\"text-decoration: none;\"><span style=\"color: windowtext;\">2005</span></span></a>)<span style=\"color: black;\"> Second year scepticism: pre-qualifying health and social care students' midpoint self-assessment, attitudes and perceptions concerning interprofessional learning and working   <em>Journal of Interprofessional Care </em> 19(3)  251-268</span></span></p>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-03-31T17:00:00Z",
 		"unlock_at": "2016-01-11T13:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 10,
@@ -1430,7 +1430,7 @@
 	"assignment": {
 		"id": 44025,
 		"description": "<p><span style=\"font-size: 14px;\">This make-up assignment is for students who missed the first week of the Introductory Module (if you were in class you do not need to do this assignment). Note that make-up assignments are only allowed for excused absences, following the absence policy for your school's program. If you missed class you must complete the google form on the Canvas page with this week's materials in order to <span style=\"background-color: #ffff00;\">XXXXX<span style=\"background-color: #ffffff;\">. This assignment </span></span></span><span style=\"font-size: 14px;\">must be submitted here by the due date in order to receive credit. Late submissions will not be accepted. Questions about this assignment should be directed to Dr Sweet (<a href=\"mailto:gsweet@umich.edu\">gsweet@umich.edu</a>).</span></p>\r\n<p>The purpose of this course is to help prepare you to work as an effective member of an interprofessional healthcare team. For the duration of the semester you will work with your assigned team members to solve complex cases. Understanding the different professional roles of your team members is one essential element to being able to work on a team. The focus of this week’s class was on meeting your team members and beginning to learn about the different professional roles.</p>\r\n<p><strong>Directions:</strong></p>\r\n<ul>\r\n<li>Review the in-class slides and ensure you understand the essential details of the course</li>\r\n<ul>\r\n<li><span style=\"color: #ff0000;\">POST slides</span></li>\r\n</ul>\r\n<li>Review the materials on Belbin’s Team Roles and identify the role that best fits you within each of the three categories</li>\r\n<ul>\r\n<li><strong><a id=\"\" class=\" instructure_scribd_file instructure_file_link\" title=\"Belbin Model of Team Roles_2016.pdf\" href=\"https://api-qa-gw.its.umich.edu/courses/208/files/876893/download?verifier=buL7F5HhQ7KR7xqxMhWAo15iWe57Qv1GrA8kdovT&amp;wrap=1\" data-api-endpoint=\"https://api-qa-gw.its.umich.edu/api/v1/courses/208/files/876893\" data-api-returntype=\"File\">Belbin Model of Team Roles.pdf</a></strong></li>\r\n</ul>\r\n<li>Complete the assignment on professional roles <span style=\"color: #ff0000;\">linked here</span> </li>\r\n</ul>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-04-01T17:00:00Z",
 		"unlock_at": "2016-01-13T22:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 0,
@@ -1478,7 +1478,7 @@
 	"assignment": {
 		"id": 56498,
 		"description": null,
-		"due_at": "2016-01-20T22:00:00Z",
+		"due_at": "2016-04-02T22:00:00Z",
 		"unlock_at": null,
 		"lock_at": null,
 		"points_possible": 5,
@@ -1526,7 +1526,7 @@
 	"assignment": {
 		"id": 44022,
 		"description": "<p><span>Complete the assignment by the due date in order to receive credit. This assignment is due at the same time for all students, even those who will need to complete the make-up assignment. Late work is not accepted. </span></p>\r\n<ul>\r\n<li><strong><a id=\"\" class=\" instructure_scribd_file instructure_file_link\" title=\"Intro_Week#2_Prework_WhatWentWrong_draft.docx\" href=\"https://api-qa-gw.its.umich.edu/courses/208/files/701035/download?verifier=d9kiWx6Ktc6Fpd0szT0SdiqoPvR50zUvK49zuTPU&amp;wrap=1\" data-api-endpoint=\"https://api-qa-gw.its.umich.edu/api/v1/courses/208/files/701035\" data-api-returntype=\"File\">When Things Go Wrong Prework.docx</a></strong></li>\r\n</ul>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-04-03T17:00:00Z",
 		"unlock_at": "2016-01-11T17:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 5,
@@ -1576,7 +1576,7 @@
 	"assignment": {
 		"id": 10727,
 		"description": "<div class=\"textPanel\">\r\n<p>This assignment will let you practice uploading a document to be graded. Notice that the rubric at the bottom of the page outlines the expectations for the assignment.<br><br> Instructions:</p>\r\n<ul>\n<li>Open Microsoft Word.</li>\r\n<li>Type your name and the date on a document.</li>\r\n<li>Save the document.</li>\r\n<li>Submit it to this assignment as an attachment. (The \"submit\" button is in the upper-right corner of the screen.)</li>\r\n</ul>\n</div>\r\n<p>If you need further help, see these instructions:</p>\r\n<ul>\n<li><a id=\"\" class=\"\" title=\"\" href=\"https://community.canvaslms.com/docs/DOC-3123\" target=\"\">Viewing assignments</a></li>\r\n<li><a id=\"\" class=\"\" title=\"\" href=\"https://community.canvaslms.com/docs/DOC-1290\" target=\"\">Submitting assignments</a></li>\r\n</ul>",
-		"due_at": "2016-01-16T04:59:00Z",
+		"due_at": "2016-04-04T04:59:00Z",
 		"unlock_at": null,
 		"lock_at": null,
 		"points_possible": 10,
@@ -1650,7 +1650,7 @@
 		"id": 1818,
 		"assignment_id": 10727,
 		"title": "1 student",
-		"due_at": "2016-01-16T04:59:00Z",
+		"due_at": "2016-04-04T04:59:00Z",
 		"all_day": true,
 		"all_day_date": "2016-01-15",
 		"unlock_at": null,
@@ -1672,7 +1672,7 @@
 	"assignment": {
 		"id": 48346,
 		"description": "<p><span style=\"font-size: 14px;\">The purpose of this assignment is to allow you to reflect on your personal attributes (strengths and challenges) that you bring to a team. Recognition of your strengths and areas for improvement will help you better function on a team. Complete this assignment by the due date in order to receive credit. Late work is not accepted. </span></p>\n<p> </p>\n<p>Used with permission from Pollard et al (2004, 2005):</p>\n<p style=\"font-size: 11pt; font-family: Calibri, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-align: start; text-indent: 0px; white-space: normal;\"><span style=\"font-size: 12px;\">Pollard KC, Miers ME, Gilchrist M (2004)  Collaborative learning for collaborative working?  Initial findings from a longitudinal study of health and social care students  <em>Health and Social Care in the Community  </em>12(4)  346-358</span></p>\n<p style=\"font-size: 11pt; font-family: Calibri, sans-serif; font-style: normal; font-variant: normal; font-weight: normal; line-height: normal; text-align: start; text-indent: 0px; white-space: normal;\"><span style=\"font-size: 12px;\"><span style=\"color: black;\">Pollard KC, Miers ME, Gilchrist </span>M  (<a style=\"color: purple; text-decoration: underline;\" href=\"https://email.med.umich.edu/owa/redir.aspx?C=6NdzVTAqokK77J4iGVyYOEXcXBwU-9EIFNHxUlhVn1IHZY_to1g_sCOGRBZ4-BF0ZDQT2DahG7E.&amp;URL=http%3a%2f%2fhsc.uwe.ac.uk%2fpublications%2fstaff%2feditpub.asp%3fpubid%3d1777%26enter%3dEdit\" target=\"_blank\"><span style=\"text-decoration: none;\"><span style=\"color: windowtext;\">2005</span></span></a>)<span style=\"color: black;\"> Second year scepticism: pre-qualifying health and social care students' midpoint self-assessment, attitudes and perceptions concerning interprofessional learning and working   <em>Journal of Interprofessional Care </em> 19(3)  251-268</span></span></p>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-04-05T17:00:00Z",
 		"unlock_at": "2016-01-11T13:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 10,
@@ -1723,7 +1723,7 @@
 	"assignment": {
 		"id": 44025,
 		"description": "<p><span style=\"font-size: 14px;\">This make-up assignment is for students who missed the first week of the Introductory Module (if you were in class you do not need to do this assignment). Note that make-up assignments are only allowed for excused absences, following the absence policy for your school's program. If you missed class you must complete the google form on the Canvas page with this week's materials in order to <span style=\"background-color: #ffff00;\">XXXXX<span style=\"background-color: #ffffff;\">. This assignment </span></span></span><span style=\"font-size: 14px;\">must be submitted here by the due date in order to receive credit. Late submissions will not be accepted. Questions about this assignment should be directed to Dr Sweet (<a href=\"mailto:gsweet@umich.edu\">gsweet@umich.edu</a>).</span></p>\r\n<p>The purpose of this course is to help prepare you to work as an effective member of an interprofessional healthcare team. For the duration of the semester you will work with your assigned team members to solve complex cases. Understanding the different professional roles of your team members is one essential element to being able to work on a team. The focus of this week’s class was on meeting your team members and beginning to learn about the different professional roles.</p>\r\n<p><strong>Directions:</strong></p>\r\n<ul>\r\n<li>Review the in-class slides and ensure you understand the essential details of the course</li>\r\n<ul>\r\n<li><span style=\"color: #ff0000;\">POST slides</span></li>\r\n</ul>\r\n<li>Review the materials on Belbin’s Team Roles and identify the role that best fits you within each of the three categories</li>\r\n<ul>\r\n<li><strong><a id=\"\" class=\" instructure_scribd_file instructure_file_link\" title=\"Belbin Model of Team Roles_2016.pdf\" href=\"https://api-qa-gw.its.umich.edu/courses/208/files/876893/download?verifier=buL7F5HhQ7KR7xqxMhWAo15iWe57Qv1GrA8kdovT&amp;wrap=1\" data-api-endpoint=\"https://api-qa-gw.its.umich.edu/api/v1/courses/208/files/876893\" data-api-returntype=\"File\">Belbin Model of Team Roles.pdf</a></strong></li>\r\n</ul>\r\n<li>Complete the assignment on professional roles <span style=\"color: #ff0000;\">linked here</span> </li>\r\n</ul>",
-		"due_at": "2016-01-20T17:00:00Z",
+		"due_at": "2016-04-06T17:00:00Z",
 		"unlock_at": "2016-01-13T22:00:00Z",
 		"lock_at": "2016-01-20T17:00:00Z",
 		"points_possible": 0,
@@ -1771,7 +1771,7 @@
 	"assignment": {
 		"id": 56498,
 		"description": null,
-		"due_at": "2016-01-20T22:00:00Z",
+		"due_at": "2016-04-07T22:00:00Z",
 		"unlock_at": null,
 		"lock_at": null,
 		"points_possible": 5,
