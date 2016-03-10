@@ -25,7 +25,9 @@ fi
 # Run URL via curl and check if request passed (bash command code == 0) or failed
 function check_url {
     local url=$1
+    set -x
     curl -q -s -f $url > /dev/null
+    set +x
     rc=$?
     if [ $rc != 0 ]; then
         echo "---- FAILED: (curl: $rc) [$url]"

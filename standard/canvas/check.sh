@@ -15,7 +15,9 @@ URL_JSON=CanvasTL/Admin/v1/users/self/upcoming_events.json?as_user_id=sis_login_
 
 ################ Run checks
 check_url $URL_PREFIX/$URL
+set -x
 echo "The following urls are expected to fail:"
+set +x
 check_url $URL_PREFIX/$URL_JSON
 #end
 
