@@ -5,7 +5,7 @@ Ruby web server to stub http requests to matching disk files.
 This implements a simple file-based stub provider. Requests are mapped from an URL to nested directories and files.  
 URL elements map to directories. File names are derived from the trailing file name on the url.  
 If no matching file exists in the matching directory
-then the file *default.<extension>* in the directory is used if it exists.   If neither exists then a 404 is returned.
+then the file *default.&lt;extension&gt;* in the directory is used if it exists.   If neither exists then a 404 is returned.
 
 File names can also contain values for query parameters.  They are currently ignored. 
 A future feature will examine query parameters, sort them and add values to 
@@ -58,14 +58,15 @@ When installing / updating the stub server do the following steps:
 
 ## Starting the server
 The server is started by running:
-> rake server:start_name &
+> rake server:&lt;start_name&gt; &
 
 Two server configurations are provided: *start_demo01*, and *start_canvas*.
 
-Environment variables may be used to further customize the server.  These values can be 
-set on the server invocation.  E.g.
+The server configurations only setup environment variables for the
+server.  To run a custom configuration just specify the enviroment
+variables explicitly at the server invocation.  E.G.
 
-> rake server PORT=\<number\> DATA_DIR=\<directory\> &
+> rake server MIN\_WAIT=&lt;number&gt; MAX\_WAIT=&lt;number&gt;  PORT=&lt;number&gt; DATA\_DIR=&lt;directory&gt; &
 
 The *PORT* determines where the server will be available.
 The *DATA_DIR* determines where on disk the server will 
@@ -76,8 +77,8 @@ look for files.
 The default values are:
 
 * port - 9100
-* directory - \<startup directory\>/test/test-files/data
-* MIN_WAIT, MAX_WAIT - 0
+* directory - &lt;startup directory&gt;/test/test-files/data
+* MIN\_WAIT, MAX\_WAIT - 0
 
 ## Stub file configurations
 You should expect to configure the Stub server for your current testing needs. 
@@ -99,7 +100,7 @@ to be a set of automated quality tests.
 
 ## Statistics
 
-A request to the URL <server:port>/status.json will return the json described below.  The json extension is optional
+A request to the URL &lt;server:port&gt;/status.json will return the json described below.  The json extension is optional
 but the results are always in JSON format. Entries starting with CONFIG_ are informational. CONFIG_WAIT_RANGE gives an 
 array of the least and then longest amount of time that the server will wait before returning a response.  
 CONFIG_START_NOW_TIME gives the server startup time and the current time of this request for statistics.  
@@ -137,4 +138,9 @@ Configuration of port forwarding can be confusing.  For local testing the approp
 This will make the local 9100 port act as if it were the 9100 port on durango.  If the stub server is not running on durango
 and/or is not using port 9100 those command should be adjusted accordingly.
 
-The '-n -N -f' options allow the command to ask for authentication and then run in the background.
+The '-n -N -f' options allow the command to ask for authentication and
+then run in the background.
+
+NOTE: Sometimes port forwarding seems to slow down response time
+considerably.  Using a local server, or a directly available one may
+be preferable.
