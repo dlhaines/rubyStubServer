@@ -22,11 +22,17 @@ The server is only partly implemented.  Running the tests will show a list of po
 Major limitations are:
 
 * Only json files are currently supported.
-* Query parameters are ignored. 
+* Query parameters are ignored.
+* The server can only stub the last entry in an URL.  It can stub
+a url like ".../Student/terms/&lt;student\_id&gt;" but it can not stub
+something like ".../Student/&lt;student\_id&gt;/terms".
+* Other stub server projects are available and may be more fully developed.
+  Consider using [Mountebank](http://www.mbtest.org) or a custom
+  Sinatra server.
 
 # Running the stub server:
 
-## initial environment setup
+## Initial environment setup
 
 The server is written in Ruby and needs a ruby environment to run. These steps may need to be repeated from time to 
 time as ruby versions change or dependencies are updated. 
